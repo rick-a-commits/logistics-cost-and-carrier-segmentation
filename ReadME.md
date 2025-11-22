@@ -2,22 +2,22 @@
 
 **Data Science Project — Predictive Modeling & Operational Analytics**
 
-This project simulates, analyzes, and models logistics carrier performance for a manufacturing supply chain.
-It combines realistic operational KPIs, geospatial data, shipment attributes, CO₂ emissions, and cost modeling.
+This project analyses logistics carrier performance for a manufacturing supply chain.
+It combines realistic operational KPIs, shipment attributes, CO₂ emissions, and cost modeling.
 The goal is to understand cost drivers, segment carriers, and build a model that can estimate shipment pricing.
 
 ---
 
 ## Project Overview
 
-Modern supply chains rely heavily on external logistics carriers whose performance affects cost, lead time, reliability, and emissions.
+Modern supply chains rely heavily on external logistics carriers whose performance affects cost, lead time, reliability, and emissions, and customer satisfaction.
 
 This project:
 
 * Generates realistic carrier shipment data (15,000+ rows)
 * Cleans and prepares it for analytics
 * Explores operational KPIs through EDA
-* Segments carriers by performance
+* Segments carriers by performance using KMeans clustering
 * Builds a model that predicts shipment cost
 * Highlights insights applicable to business decisions
 
@@ -28,7 +28,7 @@ This project:
 ```
 ├── EDA.ipynb                     # Data exploration & KPI insights
 ├── carrier_segmentation.ipynb    # Clustering / carrier grouping analysis
-├── pricing_mode.ipynb            # ML model predicting cost
+├── pricing_model.ipynb            # ML model predicting cost
 ├── clean_data.csv                # Cleaned feature dataset ready for modeling
 ├── carrier_kpi_geographic_15000.csv  # Raw synthetic logistics dataset
 ├── preprocessor.pkl              # Stored feature transformation pipeline
@@ -126,11 +126,11 @@ Segments can guide:
 
 Built a machine-learning model to estimate shipment cost based on:
 
-* Mode
-* Weight
+* Transport Mode
+* Shipment Weight
 * Distance
 * Carrier
-* Emissions
+
 
 **Model:** XGBoost Regressor
 **Artifacts stored:**
